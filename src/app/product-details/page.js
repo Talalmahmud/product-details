@@ -1,19 +1,19 @@
 "use client";
-import React, { memo, useState } from "react";
+import React, { useState, memo } from "react";
 
 const ProductDetails = ({ product, reviews }) => {
-    const { sizes, colors } = product;
-    const [productImg, setProductImg] = useState(product.images[0]);
+    const { title, description, price, images, sizes, colors } = product;
+    const [productImg, setProductImg] = useState(images[0]);
 
     const imageChange = (id) => {
-        setProductImg(product.images[id]);
+        setProductImg(images[id]);
     };
 
     return (
         <div>
             <div className="container mx-auto mt-4 p-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {/* product product.images */}
+                    {/* product images */}
                     <div className=" flex flex-col justify-center items-center gap-4">
                         <img
                             src={productImg}
@@ -22,7 +22,7 @@ const ProductDetails = ({ product, reviews }) => {
                         />
                         <div className=" w-full flex gap-4 bg-slate-50 p-4">
                             {" "}
-                            {product.images.map((image, id) => (
+                            {images.map((image, id) => (
                                 <button
                                     className={`${
                                         productImg === image &&
@@ -44,12 +44,8 @@ const ProductDetails = ({ product, reviews }) => {
 
                     {/* Product Information */}
                     <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-bold mb-2">
-                            {product.title}
-                        </h2>
-                        <p className="text-lg font-semibold mb-2">
-                            {product.price}
-                        </p>
+                        <h2 className="text-2xl font-bold mb-2">{title}</h2>
+                        <p className="text-lg font-semibold mb-2">{price}</p>
                         <div className="mb-2">
                             <p className="text-gray-600 font-semibold">Size:</p>
                             {sizes.map((size, index) => (
@@ -79,7 +75,7 @@ const ProductDetails = ({ product, reviews }) => {
                     <h3 className="text-xl font-bold border-b-2 py-1">
                         Product Description
                     </h3>
-                    <p>{product.description}</p>
+                    <p>{description}</p>
                 </div>
 
                 {/* Product Reviews */}
