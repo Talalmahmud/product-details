@@ -1,6 +1,6 @@
 // pages/product-details.js
 "use client";
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 
 const ProductDetails = ({ product, reviews }) => {
     const { title, description, price, images, sizes, colors } = product;
@@ -100,4 +100,4 @@ const ProductDetails = ({ product, reviews }) => {
     );
 };
 
-export default ProductDetails;
+export default memo(ProductDetails);
