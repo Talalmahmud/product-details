@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 const ProductDetails = ({ product, reviews }) => {
-    const { name, description, price, images, sizes, colors } = product;
+    const { title, description, price, images, sizes, colors } = product;
     const [productImg, setProductImg] = useState(images[0]);
 
     const imageChange = (id) => {
@@ -45,7 +45,7 @@ const ProductDetails = ({ product, reviews }) => {
 
                     {/* Product Information */}
                     <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-bold mb-2">{name}</h2>
+                        <h2 className="text-2xl font-bold mb-2">{title}</h2>
                         <p className="text-lg font-semibold mb-2">{price}</p>
                         <div className="mb-2">
                             <p className="text-gray-600 font-semibold">Size:</p>

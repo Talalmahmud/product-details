@@ -3,7 +3,7 @@ import ProductDetails from "./product-details/page";
 
 const product = {
     product: {
-        name: "Product Name",
+        title: "Product Name",
         description:
             "A flash diffuser is an accessory that helps spread the light out to avoid hard product photography lighting. One of the best product photography techniques, using a flash diffuser can help ensure that your product photography is well lit. Good diffusers help illuminate a product or person without a washed out look. They also help create a more natural light look. In general, a flash diffuser helps make pictures look better. When it comes to using the camera’s built-in flash and a flash diffuser, your best bet is almost always a diffuser.",
         price: "$19.99",
