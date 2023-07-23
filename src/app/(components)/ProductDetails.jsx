@@ -11,7 +11,7 @@ const ProductDetails = ({ product, reviews }) => {
 
     return (
         <div>
-            <div className="container mx-auto mt-4 p-2">
+            <div className="container mx-auto md:mt-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* product product.images */}
                     <div className=" flex flex-col justify-center items-center gap-4">
