@@ -1,4 +1,3 @@
-// pages/product-details.js
 "use client";
 import React, { memo, useState } from "react";
 
