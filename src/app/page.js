@@ -1,5 +1,6 @@
 "use client";
-import ProductDetails from "./product-details/page";
+
+import ProductDetails from "@/components/ProductDetails";
 
 const product = {
     product: {
